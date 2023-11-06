@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
  slider = document.getElementById("slider");
 
     document.getElementById("play").addEventListener("click", function() {
+        volume.textContent = video.volume * 100 + "%";
         video.play();
         console.log("Play Video");
     });
@@ -50,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
  slider.addEventListener("input", function() {
   video.volume = slider.value / 100;
   volume.textContent = slider.value + "%";
-  console.log("Volume at " + slider.value + "%");
+  console.log("Video Volume: " + slider.value + "%");
     });
 
  document.getElementById("vintage").addEventListener("click", function() {
